@@ -124,7 +124,7 @@
                             <p>פיתוח מערכת Full-Stack אופטימלית לניהול לוח זמנים אקדמי, מעקב סטודנטים וניהול אדמיניסטרטיבי בזמן אמת.</p>
 
                             <div class="project-buttons">
-                                <a href="http://localhost:5173/" class="btn-project" target="_blank">צפייה באתר</a>
+                                <a href="#" class="btn-project open-labs-modal" >צפייה באתר</a>
                                 <a href="https://github.com/inbalf33/lab-management-system.git" class="btn-project btn-github" target="_blank">GitHub</a>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
                             <p>פלטפורמת Full-Stack מתקדמת המשלבת ממשק משתמש ב-React ושרת Node.js/Express לניהול וחיפוש משרות דינמי.</p>
 
                             <div class="project-buttons">
-                                <a href="http://localhost:5173/" class="btn-project" target="_blank">צפייה באתר</a>
+                                <a href="#" class="btn-project open-jobs-modal">צפייה באתר</a>
                                 <a href="https://github.com/inbalf33/jobs-app.git" class="btn-project btn-github" target="_blank">GitHub</a>
                             </div>
                         </div>
@@ -309,9 +309,74 @@
 
     </main>
 
+    <!-- מודל מערכת חיפוש משרות - פרטי התחברות -->
+    <div id="jobsModal" class="custom-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>פרטי התחברות למערכת משרות</h3>
+            <p class="modal-desc">בחר את סוג המשתמש הרצוי לכניסה למערכת:</p>
+            
+            <div class="credentials-box">
+                <div class="cred-item">
+                    <h4>👑 אדמין מערכת</h4>
+                    <p>
+                        <strong>אימייל:</strong> <span class="copy-text">inbaladmin@gmail.com</span>
+                        <button class="copy-btn" title="העתק מייל" onclick="copyToClipboard('inbaladmin@gmail.com', this)">
+                            <svg class="copy-icon" viewBox="0 0 16 16" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>
+                        </button>
+                    </p>
+                    <p>
+                        <strong>סיסמה:</strong> <span class="copy-text">Pass123!</span>
+                        <button class="copy-btn" title="העתק סיסמה" onclick="copyToClipboard('Pass123!', this)">
+                            <svg class="copy-icon" viewBox="0 0 16 16" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>
+                        </button>
+                    </p>
+                </div>
+                <hr>
+                <div class="cred-item">
+                    <h4>💼 משתמש מגייס (רגיל)</h4>
+                    <p>
+                        <strong>אימייל:</strong> <span class="copy-text">taltst21@gmail.com</span>
+                        <button class="copy-btn" title="העתק מייל" onclick="copyToClipboard('taltst21@gmail.com', this)">
+                            <svg class="copy-icon" viewBox="0 0 16 16" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>
+                        </button>
+                    </p>
+                    <p>
+                        <strong>סיסמה:</strong> <span class="copy-text">Pass123!</span>
+                        <button class="copy-btn" title="העתק סיסמה" onclick="copyToClipboard('Pass123!', this)">
+                            <svg class="copy-icon" viewBox="0 0 16 16" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <a href="https://jobs-app-puce.vercel.app/" target="_blank" class="btn-modal-go">מעבר לאתר</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- מודל מערכת ניהול מעבדות - בבנייה -->
+    <div id="labsModal" class="custom-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>מערכת ניהול מעבדות (LabFlow)</h3>
+            <div class="labs-notice">
+                <span style="font-size: 36px;">🚧</span>
+                <p>המערכת כרגע בבנייה ובהמשך יצורף קישור אליה.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="CloseBtnStyle btn-modal-close">הבנתי, תודה</button>
+            </div>
+        </div>
+    </div>
+
+
     <footer>
         <p> &copy;  2026 Inbal Fish  </p>
     </footer>
+
+    <script src="js/script.js"></script>
 
     </body>
 </html>
